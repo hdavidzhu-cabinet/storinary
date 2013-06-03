@@ -1,8 +1,35 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+/*UNIVERSAL BORDER*/
+	* {
+		/*border: 1px solid black;*/
+	}
 
-a {
-  color: #00B7FF;
-}
+/*GENERAL*/
+	body {
+	  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	}
+
+	a {
+	  color: #00B7FF;
+	}
+
+/*SEARCH BAR*/
+	.search_bar {
+		width: 600px;
+		height: 30px;
+		margin: auto;
+		margin-top: 20px;
+	}
+
+	.text_input {
+		width: 93%;
+		height: 100%;
+		float: left;
+		border: 2px solid gray;
+	}
+
+	.search_button {
+		width: 30px;
+		height: 100%;
+		float: left;
+		border: 2px solid black;
+	}
