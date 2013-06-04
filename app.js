@@ -5,15 +5,18 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , user = require('./routes/user')
+  , user = require('./routes/user.js')
   , http = require('http')
   , path = require('path')
-  , models = require('./models/models')
+  , models = require('./models.js')
   , passport = require('passport')
+  , mongoose = require('mongoose')
   , GoogleStrategy = require('passport-google').Strategy;
 
 var app = express();
-var User = models.User
+var User = models.User;
+
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/storinary');
 
 // development only
 if ('development' == app.get('env')) {
@@ -29,9 +32,8 @@ passport.use(new GoogleStrategy({
     realm: local
   },
   function(identifier, profile, done) {
-
     var email = profile.emails[0].value;
-    console.log(email);
+    console.log("User email: ", email);
     User.findOne({email:email}).exec(function(err,user){
       console.log("\nUser info below: \n")
       console.log(user);
@@ -86,7 +88,7 @@ passport.deserializeUser(function(email, done) {
 });
 
 app.get('/', routes.index);
-app.get('/login', user.login); // Logging in, creating a user.
+app.get('/login', loginRequired, user.login); // Logging in, creating a user.
 app.get('/auth/google', passport.authenticate('google'));
 app.get('/auth/google/return', passport.authenticate('google', {failureRedirect: '/login' }), function(req, res) {
   res.redirect('/');
