@@ -4,10 +4,11 @@ var userSchema = mongoose.Schema({
     username: String,
     name: String,
     analogies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Analogy' }],
+    email: String
 });
 
 var conceptSchema = mongoose.Schema({
-    title:
+    title: String,
     analogies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Analogy' }],
 });
 
