@@ -13,6 +13,7 @@ var express = require('express')
   , GoogleStrategy = require('passport-google').Strategy;
 
 var app = express();
+var User = models.User
 
 // development only
 if ('development' == app.get('env')) {
