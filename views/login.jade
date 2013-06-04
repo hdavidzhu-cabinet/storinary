@@ -4,9 +4,14 @@ block scripts
     script.
         $(document).ready(function() {
             var height = $(window).height();
-            $('.login-button').css('margin-top', height/2-25);
+            var width = $(window).width();
+            $('.login-button').css('top', height/2-25);
+            $('.login-button').css('left', width/2-66);
             $('.login-button').css('display', 'block');
         });
 
 block content
+    <section class="text cf">
+    <h1>Storinary</h1>
+    </section>
     a(href="/auth/google", class="btn btn-large btn-block btn-success login-button") Login with Google

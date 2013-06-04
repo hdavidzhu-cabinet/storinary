@@ -2,7 +2,8 @@ var mongoose = require('mongoose');
 
 var userSchema = mongoose.Schema({
     username: String,
-    name: String,
+    firstName: String,
+    lastName: String,
     analogies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Analogy' }],
     email: String
 });

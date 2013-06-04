@@ -33,7 +33,8 @@ passport.use(new GoogleStrategy({
   },
   function(identifier, profile, done) {
     var email = profile.emails[0].value;
-    console.log("User email: ", email);
+    var firstName = profile.name.givenName
+    var lastName = profile.name.familyName;
     User.findOne({email:email}).exec(function(err,user){
       console.log("\nUser info below: \n")
       console.log(user);
@@ -42,7 +43,7 @@ passport.use(new GoogleStrategy({
         return done(err);
       }
       if (user==null){
-        user = new User({email:email});
+        user = new User({email:email, firstName:firstName, lastName:lastName});
         console.log('User created.');
         user.save(function(err){
           if (err) {
