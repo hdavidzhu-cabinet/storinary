@@ -12,6 +12,14 @@
 	  color: #00B7FF;
 	}
 
+	html {
+		background-color: #ddd;
+	}
+
+	body {
+		background-color: #ddd;
+	}
+
 /*SEARCH BAR*/
 	.search_bar {
 		width: 600px;
@@ -41,4 +49,12 @@
 		padding: 200px;
 		border: 2px solid blue;
 		margin: auto;
+	}
+
+	.login-button {
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 100px;
+		width: 133px;
+		display: none;
 	}

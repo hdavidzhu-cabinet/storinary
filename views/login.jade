@@ -1,6 +1,12 @@
 extends layout
 
 block scripts
+    script.
+        $(document).ready(function() {
+            var height = $(window).height();
+            $('.login-button').css('margin-top', height/2-25);
+            $('.login-button').css('display', 'block');
+        });
 
 block content
-    a(href="/auth/google", class="btn btn-large btn-block btn-success") Login with Google
+    a(href="/auth/google", class="btn btn-large btn-block btn-success login-button") Login with Google

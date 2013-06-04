@@ -87,8 +87,8 @@ passport.deserializeUser(function(email, done) {
     });
 });
 
-app.get('/', routes.index);
-app.get('/login', loginRequired, user.login); // Logging in, creating a user.
+app.get('/', loginRequired, routes.index);
+app.get('/login', user.login); // Logging in, creating a user.
 app.get('/auth/google', passport.authenticate('google'));
 app.get('/auth/google/return', passport.authenticate('google', {failureRedirect: '/login' }), function(req, res) {
   res.redirect('/');
