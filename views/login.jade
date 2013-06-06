@@ -3,10 +3,10 @@ extends layout
 block scripts
     script.
         $(document).ready(function() {
-            var height = $(window).height();
-            var width = $(window).width();
-            $('.login-button').css('top', height/2-25);
-            $('.login-button').css('left', width/2-66);
+            //- var height = $(window).height();
+            //- var width = $(window).width();
+            //- $('.login-button').css('top', height/2-25);
+            //- $('.login-button').css('left', width/2-75);
             $('.login-button').css('display', 'block');
         });
 
@@ -15,3 +15,11 @@ block content
     <h1>Storinary</h1>
     </section>
     a(href="/auth/google", class="btn btn-large btn-block btn-success login-button") Login with Google
+    script.
+        $(document).ready(function() {
+            $('h1').animate({
+              'background-position': 'top 50px'
+            }, 5000, function() {
+              console.log('Animation complete!')
+            });
+        })
