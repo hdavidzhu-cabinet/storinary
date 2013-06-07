@@ -1,13 +1,17 @@
 doctype 5
 html
-  head
-    title= title
-    link(rel='stylesheet', type='text/css', href='/FlatUI/bootstrap/css/bootstrap-responsive.css')
-    link(rel='stylesheet', type='text/css', href='/FlatUI/css/flat-ui.css')
-    link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
-    script(src='/javascripts/jquery.js')
-    script(src='/javascripts/bootstrap.min.js')
-    script(src='/javascripts/jquery-ui.min.js')
+    head
+        title= title
+        link(rel='stylesheet', type='text/css', href='/FlatUI/bootstrap/css/bootstrap-responsive.css')
+        link(rel='stylesheet', type='text/css', href='/FlatUI/css/flat-ui.css')
+        link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
+        script(src='/javascripts/jquery.js')
+        script(src='/javascripts/bootstrap.min.js')
+        script(src='/javascripts/jquery-ui.min.js')
     block scripts
-  body
+    body
+        div.toolbar
+            form(id = "searchbox", action = "")
+                input(id = "search", type = "text", placeholder="What is...")
+                input(id = "submit", type = "submit", value = "Storinary!")
     block content
