@@ -12,16 +12,8 @@
 	  color: #00B7FF;
 	}
 
-/*	html {
-		background-color: #444;
-	}
-
-	body {
-		background-color: #444;
-	}*/
-
 /*SEARCH BAR*/
-	.search_bar {
+	#searchbox {
 		width: 600px;
 		height: 30px;
 		margin: auto;
@@ -29,18 +21,17 @@
 		margin-bottom: 40px;
 	}
 
-	.text_input {
-		width: 93%;
-		height: 100%;
+	#search {
+		width: 506px;
 		float: left;
-		border: 2px solid gray;
+		margin: auto;
 	}
 
-	.search_button {
-		width: 30px;
-		height: 100%;
+	#submit {
+		width: 80px;
+		height: 40px;
 		float: left;
-		border: 2px solid black;
+		margin: auto;
 	}
 
 /*STORY*/
@@ -51,6 +42,7 @@
 		margin: auto;
 	}
 
+/*LOGIN*/
 	.login-button {
 		position: relative;
 		margin-right: auto;
@@ -60,7 +52,7 @@
 		display: none;
 	}
 
-	/* Img + text */
+	/*Image and text*/
 	.cf:before,
 	.cf:after {
 	    content: " ";
@@ -107,4 +99,3 @@
 	        background-position: 0 -1000px;
 	    }
 	}
-

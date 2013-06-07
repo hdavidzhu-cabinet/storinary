@@ -2,9 +2,8 @@ extends layout
 
 block content
 
-	div.search_bar
-		w
-		//- div.text_input
-		//- div.search_button
+	form(id = "searchbox", action = "")
+		input(id = "search", type = "text", placeholder="What is...")
+		input(id = "submit", type = "submit", value = "Storinary!")
 	
 	div.story
