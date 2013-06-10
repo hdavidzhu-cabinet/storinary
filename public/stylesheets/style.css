@@ -14,7 +14,6 @@
 
 /*SEARCH BAR*/
 	.toolbar {
-		overflow: hidden;
 		width: 100%;
 		height: 41px;
 		position: absolute;
@@ -26,12 +25,15 @@
 		width: 600px;
 		height: 40px;
 		margin: auto;
+		margin-top: 5px;
 	}
 
 	#search {
 		width: 506px;
 		float: left;
 		margin: auto;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
 	}
 
 	#submit {
@@ -39,6 +41,8 @@
 		height: 41px;
 		float: left;
 		margin: auto;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
 	}
 
 /*STORY*/
@@ -78,6 +82,7 @@
 		font-family: Lato;
 		font-size: 10em;
 		text-align: center;
+		height: 1em;
 
 		background-image: url('/images/texture.jpg');
 		background-color: white;
@@ -106,3 +111,11 @@
 	        background-position: 0 -1000px;
 	    }
 	}
+
+	input:focus {
+		outline: none;
+	}
+
+/*	* {
+		border: 2px black solid;
+	}*/
