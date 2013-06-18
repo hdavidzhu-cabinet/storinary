@@ -71,6 +71,7 @@ app.configure(function () {
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.cookieParser('use .env files later'));
+
   app.use(express.session({ secret: 'use .env files later' }))
   app.use(passport.initialize());
   app.use(passport.session());
@@ -94,6 +95,7 @@ app.get('/auth/google', passport.authenticate('google'));
 app.get('/auth/google/return', passport.authenticate('google', {failureRedirect: '/login' }), function(req, res) {
   res.redirect('/');
 });
+app.post('/search',user.search); // Route handler for searching.
 
 
 function loginRequired(req, res, next){
